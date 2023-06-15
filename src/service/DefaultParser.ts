@@ -10,6 +10,8 @@ export default class DefaultParser implements Parser {
   parse(payloadString: string): ParseResult {
     const startupData = JSON.parse(payloadString) as StartupDto;
 
+    console.log("Startup data", startupData)
+
     const map = new Map<string, DataNode>();
 
     let totalDuration = 0;
