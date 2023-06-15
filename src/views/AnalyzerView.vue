@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div v-if="eventsStore.isAnalyzed">
+  <div>
     <span class="p-buttonset">
       <Button :label="eventsStore.appName" class="p-button-text" />
       <Button
