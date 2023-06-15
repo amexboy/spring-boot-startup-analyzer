@@ -26,7 +26,7 @@ const toast = useToast();
 const eventsStore = useEventsStore();
 const parser = new DefaultParser();
 
-const url = ref("http://localhost:8080/actuator/startup");
+const url = ref("http://localhost:8081/actuator/startup");
 const method = ref("GET");
 
 const readContent = () => {

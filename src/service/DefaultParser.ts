@@ -8,6 +8,7 @@ import type Parser from "@/service/Parser";
 
 export default class DefaultParser implements Parser {
   parse(payloadString: string): ParseResult {
+    
     const startupData = JSON.parse(payloadString) as StartupDto;
 
     console.log("Startup data", startupData)
@@ -43,6 +44,8 @@ export default class DefaultParser implements Parser {
       }
     });
     const nodes = treeNodes.filter((item) => item.data.parentId === null);
+
+    console.log("result", { totalDuration: totalDuration, events: events, nodes: nodes })
 
     return { totalDuration: totalDuration, events: events, nodes: nodes };
   }
